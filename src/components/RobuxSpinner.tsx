@@ -27,7 +27,7 @@ const RobuxSpinner: React.FC<RobuxSpinnerProps> = ({
     <div className="flex flex-col items-center justify-center space-y-4">
       <RobuxIcon
         size={getSizeValue()}
-        speed="normal"
+        speed="fast"
         className="drop-shadow-lg"
       />
       {showText && (
