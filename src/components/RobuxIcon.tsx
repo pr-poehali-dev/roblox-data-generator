@@ -63,9 +63,30 @@ const RobuxIcon: React.FC<RobuxIconProps> = ({
             x2="100%"
             y2="100%"
           >
-            <stop offset="0%" stopColor="#00A2FF" />
-            <stop offset="50%" stopColor="#0066CC" />
-            <stop offset="100%" stopColor="#004499" />
+            <stop offset="0%" className="animate-rainbow-shift">
+              <animate
+                attributeName="stop-color"
+                values="#00A2FF;#00C851;#9C27B0;#FFD700;#FF4444;#00A2FF"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </stop>
+            <stop offset="50%" className="animate-rainbow-shift">
+              <animate
+                attributeName="stop-color"
+                values="#0066CC;#9C27B0;#FFD700;#FF4444;#00A2FF;#0066CC"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </stop>
+            <stop offset="100%" className="animate-rainbow-shift">
+              <animate
+                attributeName="stop-color"
+                values="#004499;#FFD700;#FF4444;#00A2FF;#00C851;#004499"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </stop>
           </linearGradient>
         </defs>
       </svg>
