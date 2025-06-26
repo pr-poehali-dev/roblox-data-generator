@@ -4,12 +4,14 @@ interface RobuxIconProps {
   size?: number;
   speed?: "slow" | "normal" | "fast";
   className?: string;
+  isGenerating?: boolean;
 }
 
 const RobuxIcon: React.FC<RobuxIconProps> = ({
   size = 40,
   speed = "normal",
   className = "",
+  isGenerating = false,
 }) => {
   const getAnimationDuration = () => {
     switch (speed) {
@@ -46,6 +48,14 @@ const RobuxIcon: React.FC<RobuxIconProps> = ({
           fill="url(#robuxGradient)"
           stroke="#0066CC"
           strokeWidth="2"
+          style={
+            isGenerating
+              ? {
+                  transformOrigin: "50% 50%",
+                  animation: "spin 4s linear infinite",
+                }
+              : undefined
+          }
         />
 
         {/* Символ R в стиле Robux */}
